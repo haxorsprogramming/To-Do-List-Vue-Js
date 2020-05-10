@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container" id='divUtama'>
+        <div class="col s12">
+            <h3 class="center-align">Simpel To Do List</h3>
+            <div class="col s12 mt-12">
+                <a href='#!' class="waves-effect waves-light btn-large">Tambah</a>
+                <hr/>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Judul</th>
+                                <th>Deks</th>
+                                <th>Waktu</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for='dt in dataToDo'>
+                                <td>{{dt.no}}</td>
+                                <td>{{dt.judul}}</td>
+                                <td>{{dt.deks}}</td>
+                                <td>{{dt.waktu}}</td>
+                                <td><a href='#!'>Edit</a> | <a href='#!'>Hapus</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style='margin-top:12px;text-align: center;'>
+            Developer : {{pengembang}}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
